@@ -13,8 +13,12 @@ A onesie that looks fabulous and is ideal for raves/parties and occasional every
 - cushion filling (tail)
 
 ### Zippers
-- black zipper (regular)
-- black zipper (invisible)
+- 2m black zipper tape (regular)
+    - 1x 2m for middle (but only one 2m half is used, other 2m half will be used for side zippers)
+    - 2x 50cm for side zippers
+- 3x black zipper slider
+- 4x 60cm black zipper + slider (invisible)
+- 1x 30cm black zipper + slider (invisible)
 
 ### Moving ears
 - moving ear pump + earpiece
