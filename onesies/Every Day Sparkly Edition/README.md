@@ -1,11 +1,12 @@
-# Party Edition
+# Every Day Sparkly Edition
 
 ## Highlights
-A onesie that looks fabulous and is ideal for raves/parties and occasional everyday wearing. Even with the glowing moving ears and all the electronics, it's still decently lightweight and comfortable to wear.
+An every day onesie, inspired by my party onesie design. But with arms and long legs instead, as well as pockets in the belly area, for transporting your phone, keys, cash and other things comfortably. And instead of feeling the sparkly metallic polyester all over the body, one feels the more comfortable cotton jersey on the skin, which is partially covered by the sparkly metallic polyester.
 
 ## Materials
 ### Fabrics
-- black/red shimmer fabric metallic polyester party decoration shiny fabric (body)
+- black cotton jersey (body)
+- black/red sparkly metallic polyester party decoration shiny fabric (body)
 - red silk satin (belly)
 - red fluffy short hair fabric (ears)
 - white fluffy short hair fabric (ears)
@@ -16,7 +17,7 @@ A onesie that looks fabulous and is ideal for raves/parties and occasional every
 - 2m black zipper tape (regular)
     - 1x 2m for middle (but only one 2m half is used, other 2m half will be used for side zippers)
     - 2x 50cm for side zippers
-- 3x black zipper slider
+- 5x black zipper slider
 - 4x 60cm black zipper + slider (invisible)
 - 1x 30cm black zipper + slider (invisible)
 
@@ -49,7 +50,7 @@ A onesie that looks fabulous and is ideal for raves/parties and occasional every
 - scissors
 
 ## Washing & ironing instructions
-- wash silk and shiny polyester before sewing
+- wash silk, cotton and shiny polyester before sewing
 - wash onesie/silk ideally by hand, or else in the washing machine with a laundry bag. Use silk detergent.
 - when ironing the silk, make sure to place another fabric between the silk and the iron, while ironing the back side of the silk on low heat setting. Do no iron the front of the silk directly, when possible.
 
@@ -59,7 +60,7 @@ A onesie that looks fabulous and is ideal for raves/parties and occasional every
 
     Print & cut the sewing patterns, ideally with a plotter as single pieces in full size or else on A4 paper and tape the parts together
 
-2. Cut fabric (~ 60 min)
+2. Cut fabric (~ 80 min)
 
     Place the sewing patterns on the fabric and cut them. Make sure the fabric is properly alligned. The most flexible direction of the fabrics should go from left to right, not top to bottom. Safe yourself time by placing multiple layers of the same fabric above each other for cutting mirrored patterns.
 
