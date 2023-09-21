@@ -1,7 +1,7 @@
 # Every Day Sparkly Edition
 
 ## Highlights
-An every day onesie, inspired by my party onesie design. But with arms and long legs instead, as well as pockets in the belly area, for transporting your phone, keys, cash and other things comfortably. And instead of feeling the sparkly metallic polyester all over the body, one feels the more comfortable cotton jersey on the skin, which is partially covered by the sparkly metallic polyester.
+An every day onesie, inspired by my Sparkly Party Edition design. But with arms and long legs instead, as well as pockets in the belly area, for transporting your phone, keys, cash and other things comfortably. And instead of feeling the sparkly metallic polyester all over the body, one feels the more comfortable cotton jersey on the skin, which is partially covered by the sparkly metallic polyester.
 
 ## Materials
 ### Fabrics
