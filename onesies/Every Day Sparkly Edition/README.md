@@ -17,7 +17,11 @@ An every day onesie, inspired by my Sparkly Party Edition design. But with arms 
 - 2m black zipper tape (regular)
     - 1x 2m for middle (but only one 2m half is used, other 2m half will be used for side zippers)
     - 2x 50cm for side zippers
-- 5x black zipper slider
+- 70cm dark red zipper tape (regular)
+    - 2x 18cm for bottom belly pockets
+    - 2x 17cm for top belly pockets
+- 6x black zipper slider
+- 4x dark red zipper slider
 - 4x 60cm black zipper + slider (invisible)
 - 1x 30cm black zipper + slider (invisible)
 
