@@ -1,0 +1,30 @@
+from "generics/capacitors.ato" import Capacitor
+from "generics/interfaces.ato" import Power
+
+component _WS2812B_1010:
+    # component XL_minus_1010RGBC_minus_WS2812B
+    footprint = "LED-SMD_4P-L1.0-W1.0-TL_XL-1010RGBC-WS2812B"
+    lcsc_id = "C5349953"
+    mpn = "C5349953"
+    # pins
+    signal DOUT ~ pin 1
+    signal VDD ~ pin 2
+    signal GND ~ pin 3
+    signal DIN ~ pin 4
+
+    power = new Power
+    power.vcc ~ VDD
+    power.gnd ~ GND
+
+    # TODO Add specs from datasheet
+
+
+module WS2812B_1010 from _WS2812B_1010:
+    """
+    This is the WS2812B_1010 LED with the required cap.
+    """
+
+    cap = new Capacitor
+    cap.value = 100nF
+    cap.package = "0402"
+    cap.power ~ power
