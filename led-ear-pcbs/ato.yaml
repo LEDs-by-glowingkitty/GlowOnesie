@@ -1,0 +1,11 @@
+ato-version: ^0.2.0
+builds:
+  default:
+    entry: elec/src/led-ears.ato:RightEar
+  left-ear:
+    entry: elec/src/led-ears.ato:LeftEar
+dependencies:
+- name: generics
+  version_spec: '@09ad6baeaab93d53b9b6c90069ac750f4161d76f'
+  link_broken: true
+  path: elec/src/generics
