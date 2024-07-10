@@ -4,6 +4,7 @@ from "generics/interfaces.ato" import Power
 component _WS2812B_1010:
     # component XL_minus_1010RGBC_minus_WS2812B
     footprint = "LED-SMD_4P-L1.0-W1.0-TL_XL-1010RGBC-WS2812B"
+    datasheet = "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2402181502_XINGLIGHT-XL-1010RGBC-WS2812B_C5349953.pdf"
     lcsc_id = "C5349953"
     mpn = "C5349953"
     # pins
@@ -15,8 +16,38 @@ component _WS2812B_1010:
     power = new Power
     power.vcc ~ VDD
     power.gnd ~ GND
+    power.voltage = 0V
 
-    # TODO Add specs from datasheet
+    DIN.voltage = 0V
+
+    # Electrical characteristics
+    supply_voltage = 5.0 V ± 0.5 V
+    logic_input_voltage = 3.5 to 5.0 V
+    output_port_withstand_voltage = 24 V
+    operating_temperature = -20 to +85 degC
+    storage_temperature = -40 to +85 degC
+    esd_sensitivity = 3000 V
+    data_transmission_rate = 800 # Kbps
+    typical_current_per_channel = 12mA
+    max_current_per_led = 36mA
+    max_power_consumption = 200mW
+    static_power_consumption = 2mW
+
+    # Optical characteristics
+    red_intensity = 200 mcd # @ 20 mA
+    green_intensity = 800 mcd # @ 20 mA
+    blue_intensity = 300 mcd # @ 20 mA
+    red_wavelength = 620 nm to 630 nm
+    green_wavelength = 520 nm to 530 nm
+    blue_wavelength = 465 nm to 475 nm
+
+    # Functional characteristics
+    grayscale_levels = 256
+    pwm_frequency = 1.5 kHz
+    reset_code_time = 30 us to 150 us
+
+    assert power.voltage within supply_voltage
+    assert DIN.voltage within logic_input_voltage
 
 
 module WS2812B_1010 from _WS2812B_1010:

@@ -1,0 +1,8 @@
+component TestPoint_Pad_4_4mm:
+    """
+    This is a test point with a pad diameter of 4mm x 4mm.
+    """
+    footprint = "TestPoint_Pad_4.0x4.0mm"
+    mpn = "0"
+
+    signal pad ~ pin 1
