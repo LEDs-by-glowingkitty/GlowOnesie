@@ -10,11 +10,9 @@ module RightEar:
     signal DIN
     power = new Power
     power.voltage = 5V
-    power.available_current = 2.5A
+    power.current_budget = 2.5A
+    DIN.voltage: voltage
     DIN.voltage = 5V
-
-    # Check that the available current is enough for all LEDs
-    assert power.available_current > led_1.max_current_per_led * 59
 
     # add solder pads to connect LEDs to external source
     solder_pad_1 = new TestPoint_Pad_4_4mm
@@ -32,355 +30,415 @@ module RightEar:
     led_1.power.voltage = power.voltage
     led_1.DIN ~ DIN
     led_1.DIN.voltage = DIN.voltage
+    power.current_budget -= led_1.max_current_per_led
 
     led_2 = new WS2812B_1010
     led_2.power ~ power
     led_2.power.voltage = power.voltage
     led_2.DIN ~ led_1.DOUT
     led_2.DIN.voltage = DIN.voltage
+    power.current_budget -= led_2.max_current_per_led
 
     led_3 = new WS2812B_1010
     led_3.power ~ power
     led_3.power.voltage = power.voltage
     led_3.DIN ~ led_2.DOUT
     led_3.DIN.voltage = DIN.voltage
+    power.current_budget -= led_3.max_current_per_led
 
     led_4 = new WS2812B_1010
     led_4.power ~ power
     led_4.power.voltage = power.voltage
     led_4.DIN ~ led_3.DOUT
     led_4.DIN.voltage = DIN.voltage
+    power.current_budget -= led_4.max_current_per_led
 
     led_5 = new WS2812B_1010
     led_5.power ~ power
     led_5.power.voltage = power.voltage
     led_5.DIN ~ led_4.DOUT
     led_5.DIN.voltage = DIN.voltage
+    power.current_budget -= led_5.max_current_per_led
 
     led_6 = new WS2812B_1010
     led_6.power ~ power
     led_6.power.voltage = power.voltage
     led_6.DIN ~ led_5.DOUT
     led_6.DIN.voltage = DIN.voltage
+    power.current_budget -= led_6.max_current_per_led
 
     led_7 = new WS2812B_1010
     led_7.power ~ power
     led_7.power.voltage = power.voltage
     led_7.DIN ~ led_6.DOUT
     led_7.DIN.voltage = DIN.voltage
+    power.current_budget -= led_7.max_current_per_led
 
     led_8 = new WS2812B_1010
     led_8.power ~ power
     led_8.power.voltage = power.voltage
     led_8.DIN ~ led_7.DOUT
     led_8.DIN.voltage = DIN.voltage
+    power.current_budget -= led_8.max_current_per_led
 
     led_9 = new WS2812B_1010
     led_9.power ~ power
     led_9.power.voltage = power.voltage
     led_9.DIN ~ led_8.DOUT
     led_9.DIN.voltage = DIN.voltage
+    power.current_budget -= led_9.max_current_per_led
 
     led_10 = new WS2812B_1010
     led_10.power ~ power
     led_10.power.voltage = power.voltage
     led_10.DIN ~ led_9.DOUT
     led_10.DIN.voltage = DIN.voltage
+    power.current_budget -= led_10.max_current_per_led
 
     led_11 = new WS2812B_1010
     led_11.power ~ power
     led_11.power.voltage = power.voltage
     led_11.DIN ~ led_10.DOUT
     led_11.DIN.voltage = DIN.voltage
+    power.current_budget -= led_11.max_current_per_led
 
     led_12 = new WS2812B_1010
     led_12.power ~ power
     led_12.power.voltage = power.voltage
     led_12.DIN ~ led_11.DOUT
     led_12.DIN.voltage = DIN.voltage
+    power.current_budget -= led_12.max_current_per_led
 
     led_13 = new WS2812B_1010
     led_13.power ~ power
     led_13.power.voltage = power.voltage
     led_13.DIN ~ led_12.DOUT
     led_13.DIN.voltage = DIN.voltage
+    power.current_budget -= led_13.max_current_per_led
 
     led_14 = new WS2812B_1010
     led_14.power ~ power
     led_14.power.voltage = power.voltage
     led_14.DIN ~ led_13.DOUT
     led_14.DIN.voltage = DIN.voltage
+    power.current_budget -= led_14.max_current_per_led
 
     led_15 = new WS2812B_1010
     led_15.power ~ power
     led_15.power.voltage = power.voltage
     led_15.DIN ~ led_14.DOUT
     led_15.DIN.voltage = DIN.voltage
+    power.current_budget -= led_15.max_current_per_led
 
     led_16 = new WS2812B_1010
     led_16.power ~ power
     led_16.power.voltage = power.voltage
     led_16.DIN ~ led_15.DOUT
     led_16.DIN.voltage = DIN.voltage
+    power.current_budget -= led_16.max_current_per_led
 
     led_17 = new WS2812B_1010
     led_17.power ~ power
     led_17.power.voltage = power.voltage
     led_17.DIN ~ led_16.DOUT
     led_17.DIN.voltage = DIN.voltage
+    power.current_budget -= led_17.max_current_per_led
 
     led_18 = new WS2812B_1010
     led_18.power ~ power
     led_18.power.voltage = power.voltage
     led_18.DIN ~ led_17.DOUT
     led_18.DIN.voltage = DIN.voltage
+    power.current_budget -= led_18.max_current_per_led
 
     led_19 = new WS2812B_1010
     led_19.power ~ power
     led_19.power.voltage = power.voltage
     led_19.DIN ~ led_18.DOUT
     led_19.DIN.voltage = DIN.voltage
+    power.current_budget -= led_19.max_current_per_led
 
     led_20 = new WS2812B_1010
     led_20.power ~ power
     led_20.power.voltage = power.voltage
     led_20.DIN ~ led_19.DOUT
     led_20.DIN.voltage = DIN.voltage
+    power.current_budget -= led_20.max_current_per_led
 
     led_21 = new WS2812B_1010
     led_21.power ~ power
     led_21.power.voltage = power.voltage
     led_21.DIN ~ led_20.DOUT
     led_21.DIN.voltage = DIN.voltage
+    power.current_budget -= led_21.max_current_per_led
 
     led_22 = new WS2812B_1010
     led_22.power ~ power
     led_22.power.voltage = power.voltage
     led_22.DIN ~ led_21.DOUT
     led_22.DIN.voltage = DIN.voltage
+    power.current_budget -= led_22.max_current_per_led
 
     led_23 = new WS2812B_1010
     led_23.power ~ power
     led_23.power.voltage = power.voltage
     led_23.DIN ~ led_22.DOUT
     led_23.DIN.voltage = DIN.voltage
+    power.current_budget -= led_23.max_current_per_led
 
     led_24 = new WS2812B_1010
     led_24.power ~ power
     led_24.power.voltage = power.voltage
     led_24.DIN ~ led_23.DOUT
     led_24.DIN.voltage = DIN.voltage
+    power.current_budget -= led_24.max_current_per_led
 
     led_25 = new WS2812B_1010
     led_25.power ~ power
     led_25.power.voltage = power.voltage
     led_25.DIN ~ led_24.DOUT
     led_25.DIN.voltage = DIN.voltage
+    power.current_budget -= led_25.max_current_per_led
 
     led_26 = new WS2812B_1010
     led_26.power ~ power
     led_26.power.voltage = power.voltage
     led_26.DIN ~ led_25.DOUT
     led_26.DIN.voltage = DIN.voltage
+    power.current_budget -= led_26.max_current_per_led
 
     led_27 = new WS2812B_1010
     led_27.power ~ power
     led_27.power.voltage = power.voltage
     led_27.DIN ~ led_26.DOUT
     led_27.DIN.voltage = DIN.voltage
+    power.current_budget -= led_27.max_current_per_led
 
     led_28 = new WS2812B_1010
     led_28.power ~ power
     led_28.power.voltage = power.voltage
     led_28.DIN ~ led_27.DOUT
     led_28.DIN.voltage = DIN.voltage
+    power.current_budget -= led_28.max_current_per_led
 
     led_29 = new WS2812B_1010
     led_29.power ~ power
     led_29.power.voltage = power.voltage
     led_29.DIN ~ led_28.DOUT
     led_29.DIN.voltage = DIN.voltage
+    power.current_budget -= led_29.max_current_per_led
 
     led_30 = new WS2812B_1010
     led_30.power ~ power
     led_30.power.voltage = power.voltage
     led_30.DIN ~ led_29.DOUT
     led_30.DIN.voltage = DIN.voltage
+    power.current_budget -= led_30.max_current_per_led
 
     led_31 = new WS2812B_1010
     led_31.power ~ power
     led_31.power.voltage = power.voltage
     led_31.DIN ~ led_30.DOUT
     led_31.DIN.voltage = DIN.voltage
+    power.current_budget -= led_31.max_current_per_led
 
     led_32 = new WS2812B_1010
     led_32.power ~ power
     led_32.power.voltage = power.voltage
     led_32.DIN ~ led_31.DOUT
     led_32.DIN.voltage = DIN.voltage
+    power.current_budget -= led_32.max_current_per_led
 
     led_33 = new WS2812B_1010
     led_33.power ~ power
     led_33.power.voltage = power.voltage
     led_33.DIN ~ led_32.DOUT
     led_33.DIN.voltage = DIN.voltage
+    power.current_budget -= led_33.max_current_per_led
 
     led_34 = new WS2812B_1010
     led_34.power ~ power
     led_34.power.voltage = power.voltage
     led_34.DIN ~ led_33.DOUT
     led_34.DIN.voltage = DIN.voltage
+    power.current_budget -= led_34.max_current_per_led
 
     led_35 = new WS2812B_1010
     led_35.power ~ power
     led_35.power.voltage = power.voltage
     led_35.DIN ~ led_34.DOUT
     led_35.DIN.voltage = DIN.voltage
+    power.current_budget -= led_35.max_current_per_led
 
     led_36 = new WS2812B_1010
     led_36.power ~ power
     led_36.power.voltage = power.voltage
     led_36.DIN ~ led_35.DOUT
     led_36.DIN.voltage = DIN.voltage
+    power.current_budget -= led_36.max_current_per_led
 
     led_37 = new WS2812B_1010
     led_37.power ~ power
     led_37.power.voltage = power.voltage
     led_37.DIN ~ led_36.DOUT
     led_37.DIN.voltage = DIN.voltage
+    power.current_budget -= led_37.max_current_per_led
 
     led_38 = new WS2812B_1010
     led_38.power ~ power
     led_38.power.voltage = power.voltage
     led_38.DIN ~ led_37.DOUT
     led_38.DIN.voltage = DIN.voltage
+    power.current_budget -= led_38.max_current_per_led
 
     led_39 = new WS2812B_1010
     led_39.power ~ power
     led_39.power.voltage = power.voltage
     led_39.DIN ~ led_38.DOUT
     led_39.DIN.voltage = DIN.voltage
+    power.current_budget -= led_39.max_current_per_led
 
     led_40 = new WS2812B_1010
     led_40.power ~ power
     led_40.power.voltage = power.voltage
     led_40.DIN ~ led_39.DOUT
     led_40.DIN.voltage = DIN.voltage
+    power.current_budget -= led_40.max_current_per_led
 
     led_41 = new WS2812B_1010
     led_41.power ~ power
     led_41.power.voltage = power.voltage
     led_41.DIN ~ led_40.DOUT
     led_41.DIN.voltage = DIN.voltage
+    power.current_budget -= led_41.max_current_per_led
 
     led_42 = new WS2812B_1010
     led_42.power ~ power
     led_42.power.voltage = power.voltage
     led_42.DIN ~ led_41.DOUT
     led_42.DIN.voltage = DIN.voltage
+    power.current_budget -= led_42.max_current_per_led
 
     led_43 = new WS2812B_1010
     led_43.power ~ power
     led_43.power.voltage = power.voltage
     led_43.DIN ~ led_42.DOUT
     led_43.DIN.voltage = DIN.voltage
+    power.current_budget -= led_43.max_current_per_led
 
     led_44 = new WS2812B_1010
     led_44.power ~ power
     led_44.power.voltage = power.voltage
     led_44.DIN ~ led_43.DOUT
     led_44.DIN.voltage = DIN.voltage
+    power.current_budget -= led_44.max_current_per_led
 
     led_45 = new WS2812B_1010
     led_45.power ~ power
     led_45.power.voltage = power.voltage
     led_45.DIN ~ led_44.DOUT
     led_45.DIN.voltage = DIN.voltage
+    power.current_budget -= led_45.max_current_per_led
 
     led_46 = new WS2812B_1010
     led_46.power ~ power
     led_46.power.voltage = power.voltage
     led_46.DIN ~ led_45.DOUT
     led_46.DIN.voltage = DIN.voltage
+    power.current_budget -= led_46.max_current_per_led
 
     led_47 = new WS2812B_1010
     led_47.power ~ power
     led_47.power.voltage = power.voltage
     led_47.DIN ~ led_46.DOUT
     led_47.DIN.voltage = DIN.voltage
+    power.current_budget -= led_47.max_current_per_led
 
     led_48 = new WS2812B_1010
     led_48.power ~ power
     led_48.power.voltage = power.voltage
     led_48.DIN ~ led_47.DOUT
     led_48.DIN.voltage = DIN.voltage
+    power.current_budget -= led_48.max_current_per_led
 
     led_49 = new WS2812B_1010
     led_49.power ~ power
     led_49.power.voltage = power.voltage
     led_49.DIN ~ led_48.DOUT
     led_49.DIN.voltage = DIN.voltage
+    power.current_budget -= led_49.max_current_per_led
 
     led_50 = new WS2812B_1010
     led_50.power ~ power
     led_50.power.voltage = power.voltage
     led_50.DIN ~ led_49.DOUT
     led_50.DIN.voltage = DIN.voltage
+    power.current_budget -= led_50.max_current_per_led
 
     led_51 = new WS2812B_1010
     led_51.power ~ power
     led_51.power.voltage = power.voltage
     led_51.DIN ~ led_50.DOUT
     led_51.DIN.voltage = DIN.voltage
+    power.current_budget -= led_51.max_current_per_led
 
     led_52 = new WS2812B_1010
     led_52.power ~ power
     led_52.power.voltage = power.voltage
     led_52.DIN ~ led_51.DOUT
     led_52.DIN.voltage = DIN.voltage
+    power.current_budget -= led_52.max_current_per_led
 
     led_53 = new WS2812B_1010
     led_53.power ~ power
     led_53.power.voltage = power.voltage
     led_53.DIN ~ led_52.DOUT
     led_53.DIN.voltage = DIN.voltage
+    power.current_budget -= led_53.max_current_per_led
 
     led_54 = new WS2812B_1010
     led_54.power ~ power
     led_54.power.voltage = power.voltage
     led_54.DIN ~ led_53.DOUT
     led_54.DIN.voltage = DIN.voltage
+    power.current_budget -= led_54.max_current_per_led
 
     led_55 = new WS2812B_1010
     led_55.power ~ power
     led_55.power.voltage = power.voltage
     led_55.DIN ~ led_54.DOUT
     led_55.DIN.voltage = DIN.voltage
+    power.current_budget -= led_55.max_current_per_led
 
     led_56 = new WS2812B_1010
     led_56.power ~ power
     led_56.power.voltage = power.voltage
     led_56.DIN ~ led_55.DOUT
     led_56.DIN.voltage = DIN.voltage
+    power.current_budget -= led_56.max_current_per_led
 
     led_57 = new WS2812B_1010
     led_57.power ~ power
     led_57.power.voltage = power.voltage
     led_57.DIN ~ led_56.DOUT
     led_57.DIN.voltage = DIN.voltage
+    power.current_budget -= led_57.max_current_per_led
 
     led_58 = new WS2812B_1010
     led_58.power ~ power
     led_58.power.voltage = power.voltage
     led_58.DIN ~ led_57.DOUT
     led_58.DIN.voltage = DIN.voltage
+    power.current_budget -= led_58.max_current_per_led
 
     led_59 = new WS2812B_1010
     led_59.power ~ power
     led_59.power.voltage = power.voltage
     led_59.DIN ~ led_58.DOUT
     led_59.DIN.voltage = DIN.voltage
+    power.current_budget -= led_59.max_current_per_led
 
+    assert power.current_budget >= 0
 
 
 module LeftEar from RightEar:

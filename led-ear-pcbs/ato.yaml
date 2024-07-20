@@ -1,4 +1,4 @@
-ato-version: ^0.2.0
+ato-version: ^0.2.58
 builds:
   default:
     entry: elec/src/led-ears.ato:RightEar

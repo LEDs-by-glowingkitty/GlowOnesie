@@ -1,6 +1,8 @@
 interface Power:
     signal vcc
     signal gnd
+    voltage: voltage
+    current_budget: current
 
 interface FloatPower:
     signal v_pos

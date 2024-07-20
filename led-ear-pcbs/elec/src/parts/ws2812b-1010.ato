@@ -18,6 +18,7 @@ component _WS2812B_1010:
     power.gnd ~ GND
     power.voltage = 0V
 
+    DIN.voltage: voltage
     DIN.voltage = 0V
 
     # Electrical characteristics
